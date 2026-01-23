@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:news_app/features/news/presentation/pages/home_page.dart';
+import 'package:news_app/core/router/app_router.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -10,12 +11,10 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
       title: 'News App',
-      theme: ThemeData(
-        colorScheme: .fromSeed(seedColor: Colors.deepPurple),
-      ),
-      home: const HomePage(),
+      routerConfig: AppRouter.router,
+   
     );
   }
 }
