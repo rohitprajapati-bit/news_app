@@ -5,5 +5,5 @@ class AppRoutes {
   static const String detailWeb = '/detailWeb';
   static const String favorites = '/favorites';
   static const String settings = '/settings';
-  static const String bottomNavBar = '/bottomNavBar';
+  static const String bottomNavBarController = '/bottomNavBarController';
 } 

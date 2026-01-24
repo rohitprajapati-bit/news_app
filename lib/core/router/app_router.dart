@@ -1,12 +1,12 @@
 import 'package:go_router/go_router.dart';
 import 'package:news_app/core/router/app_routes.dart';
-import 'package:news_app/features/news/presentation/pages/bottom_nav/bottom_nav_bar.dart';
-import 'package:news_app/features/news/presentation/pages/detail_page.dart';
-import 'package:news_app/features/news/presentation/pages/details_web_page.dart';
-import 'package:news_app/features/news/presentation/pages/favorites_page.dart';
+import 'package:news_app/features/news/presentation/pages/bottom_nav/bottom_nav_bar_controller.dart';
+import 'package:news_app/features/news/presentation/pages/news_details/detail_page.dart';
+import 'package:news_app/features/news/presentation/pages/news_details/details_web_page.dart';
+import 'package:news_app/features/news/presentation/pages/favorites/favorites_page.dart';
 import 'package:news_app/features/news/presentation/pages/home/home_page.dart';
-import 'package:news_app/features/news/presentation/pages/setting_page.dart';
-import 'package:news_app/features/news/presentation/pages/splash_page.dart';
+import 'package:news_app/features/news/presentation/pages/setting/setting_page.dart';
+import 'package:news_app/features/news/presentation/pages/splash/splash_page.dart';
 
 class AppRouter {
   AppRouter._();
@@ -58,9 +58,9 @@ class AppRouter {
       builder: (_, _) => const SettingPage(),
     ),
     GoRoute(
-      path: AppRoutes.bottomNavBar,
-      name: 'bottomNavBar',
-      builder: (_, _) => const BottomNavBar(),
+      path: AppRoutes.bottomNavBarController,
+      name: 'BottomNavBarController',
+      builder: (_, _) => const BottomNavBarController(),
     ),
   ];
 }

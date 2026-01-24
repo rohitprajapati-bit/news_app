@@ -5,9 +5,22 @@ import 'package:news_app/core/router/app_routes.dart';
 import 'package:news_app/features/news/presentation/bloc/news_bloc.dart';
 import 'package:news_app/features/news/presentation/bloc/news_state.dart';
 import 'package:news_app/features/news/presentation/cubit/fav_cubit.dart';
+import 'package:news_app/features/news/domain/entities/news.dart';
 
-SliverToBoxAdapter buildNewsList() {
-  return SliverToBoxAdapter(
+// SliverToBoxAdapter buildNewsList() {
+//   return
+  
+
+
+// }
+
+
+class SliverToBoxAdapterWidget extends StatelessWidget {
+  const SliverToBoxAdapterWidget({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return    SliverToBoxAdapter(
     child: BlocBuilder<NewsBloc, NewsState>(
       builder: (context, state) {
         // LOADING
@@ -88,15 +101,15 @@ SliverToBoxAdapter buildNewsList() {
                             ),
                           ),
 
-                          BlocBuilder<FavCubit, Set<int>>(
-                            builder: (context, favSet) {
-                              final isFav = favSet.contains(index);
+                          BlocBuilder<FavCubit, List<News>>(
+                            builder: (context, favList) {
+                              final isFav = favList.any(
+                                (e) => e.url == news.url,
+                              );
 
                               return IconButton(
                                 onPressed: () {
-                                  context.read<FavCubit>().toggleFavorite(
-                                    index,
-                                  );
+                                  context.read<FavCubit>().toggleFavorite(news);
                                 },
                                 icon: Icon(
                                   isFav
@@ -120,4 +133,6 @@ SliverToBoxAdapter buildNewsList() {
       },
     ),
   );
+
+  }
 }

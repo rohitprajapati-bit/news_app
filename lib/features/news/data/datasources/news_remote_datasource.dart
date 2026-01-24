@@ -1,6 +1,6 @@
 import 'package:news_app/core/network/api_endpoints.dart';
 import 'package:news_app/core/network/api_service.dart';
-import 'package:news_app/features/news/data/models/news_model.dart';
+import 'package:news_app/features/news/data/models/news_model/news_model.dart';
 
 abstract class NewsRemoteDataSource {
   Future<List<NewsModel>> getTopHeadlines();

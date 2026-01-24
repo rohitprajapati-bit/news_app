@@ -10,7 +10,6 @@ class DetailsWebPage extends StatelessWidget {
     final controller = WebViewController()
       ..setJavaScriptMode(JavaScriptMode.unrestricted)
       ..loadRequest(Uri.parse(news.url));
-
     return Scaffold(
       appBar: AppBar(
         title: Text(
@@ -22,10 +21,7 @@ class DetailsWebPage extends StatelessWidget {
           ),
         ),
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: WebViewWidget(controller: controller),
-      ),
+      body: WebViewWidget(controller: controller),
     );
   }
 }

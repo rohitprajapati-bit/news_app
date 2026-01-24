@@ -1,4 +1,4 @@
-import 'package:news_app/features/news/data/models/news_model.dart';
+import 'package:news_app/features/news/data/models/news_model/news_model.dart';
 
 class News {
   final String title;
@@ -16,12 +16,4 @@ class News {
   });
 }
 
-extension NewsMapper on NewsModel {
-  News toEntity() => News(
-    title: title,
-    description: description,
-    imageUrl: urlToImage,
-    content: content,
-    url: url,
-  );
-}
+

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:news_app/core/router/app_routes.dart';
 import 'package:go_router/go_router.dart';
+import 'package:news_app/features/news/presentation/pages/splash/widgets/stack_widget.dart';
 
 class SplashPage extends StatefulWidget {
   const SplashPage({super.key});
@@ -16,7 +16,7 @@ class _SplashPageState extends State<SplashPage> {
     super.initState();
     Future.delayed(const Duration(seconds: 2), () {
       if (!mounted) return;
-      context.go(AppRoutes.bottomNavBar);
+      context.go(AppRoutes.bottomNavBarController);
     });
   }
 
@@ -31,29 +31,7 @@ class _SplashPageState extends State<SplashPage> {
             end: Alignment.bottomCenter,
           ),
         ),
-        child: Stack(
-          children: [
-            Positioned(
-              bottom: 420,
-              left: 100,
-              child: SvgPicture.asset(
-                'assets/svg_images/Subtract-1.svg',
-                width: 20,
-              ),
-            ),
-
-            Positioned(
-              bottom: 490,
-              right: 100,
-              child: SvgPicture.asset(
-                'assets/svg_images/Subtract.svg',
-                width: 20,
-              ),
-            ),
-
-            Center(child: Image.asset('assets/png_images/ShouT.png')),
-          ],
-        ),
+        child: StackWidget(),
       ),
     );
   }

@@ -12,8 +12,7 @@ part of 'news_model.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
-);
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 NewsModel _$NewsModelFromJson(Map<String, dynamic> json) {
   return _NewsModel.fromJson(json);
@@ -28,12 +27,8 @@ mixin _$NewsModel {
   String get author => throw _privateConstructorUsedError;
   String get content => throw _privateConstructorUsedError;
 
-  /// Serializes this NewsModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of NewsModel
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $NewsModelCopyWith<NewsModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -43,14 +38,13 @@ abstract class $NewsModelCopyWith<$Res> {
   factory $NewsModelCopyWith(NewsModel value, $Res Function(NewsModel) then) =
       _$NewsModelCopyWithImpl<$Res, NewsModel>;
   @useResult
-  $Res call({
-    String title,
-    String description,
-    String urlToImage,
-    String url,
-    String author,
-    String content,
-  });
+  $Res call(
+      {String title,
+      String description,
+      String urlToImage,
+      String url,
+      String author,
+      String content});
 }
 
 /// @nodoc
@@ -63,8 +57,6 @@ class _$NewsModelCopyWithImpl<$Res, $Val extends NewsModel>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of NewsModel
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -75,35 +67,32 @@ class _$NewsModelCopyWithImpl<$Res, $Val extends NewsModel>
     Object? author = null,
     Object? content = null,
   }) {
-    return _then(
-      _value.copyWith(
-            title: null == title
-                ? _value.title
-                : title // ignore: cast_nullable_to_non_nullable
-                      as String,
-            description: null == description
-                ? _value.description
-                : description // ignore: cast_nullable_to_non_nullable
-                      as String,
-            urlToImage: null == urlToImage
-                ? _value.urlToImage
-                : urlToImage // ignore: cast_nullable_to_non_nullable
-                      as String,
-            url: null == url
-                ? _value.url
-                : url // ignore: cast_nullable_to_non_nullable
-                      as String,
-            author: null == author
-                ? _value.author
-                : author // ignore: cast_nullable_to_non_nullable
-                      as String,
-            content: null == content
-                ? _value.content
-                : content // ignore: cast_nullable_to_non_nullable
-                      as String,
-          )
-          as $Val,
-    );
+    return _then(_value.copyWith(
+      title: null == title
+          ? _value.title
+          : title // ignore: cast_nullable_to_non_nullable
+              as String,
+      description: null == description
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
+              as String,
+      urlToImage: null == urlToImage
+          ? _value.urlToImage
+          : urlToImage // ignore: cast_nullable_to_non_nullable
+              as String,
+      url: null == url
+          ? _value.url
+          : url // ignore: cast_nullable_to_non_nullable
+              as String,
+      author: null == author
+          ? _value.author
+          : author // ignore: cast_nullable_to_non_nullable
+              as String,
+      content: null == content
+          ? _value.content
+          : content // ignore: cast_nullable_to_non_nullable
+              as String,
+    ) as $Val);
   }
 }
 
@@ -111,19 +100,17 @@ class _$NewsModelCopyWithImpl<$Res, $Val extends NewsModel>
 abstract class _$$NewsModelImplCopyWith<$Res>
     implements $NewsModelCopyWith<$Res> {
   factory _$$NewsModelImplCopyWith(
-    _$NewsModelImpl value,
-    $Res Function(_$NewsModelImpl) then,
-  ) = __$$NewsModelImplCopyWithImpl<$Res>;
+          _$NewsModelImpl value, $Res Function(_$NewsModelImpl) then) =
+      __$$NewsModelImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({
-    String title,
-    String description,
-    String urlToImage,
-    String url,
-    String author,
-    String content,
-  });
+  $Res call(
+      {String title,
+      String description,
+      String urlToImage,
+      String url,
+      String author,
+      String content});
 }
 
 /// @nodoc
@@ -131,12 +118,9 @@ class __$$NewsModelImplCopyWithImpl<$Res>
     extends _$NewsModelCopyWithImpl<$Res, _$NewsModelImpl>
     implements _$$NewsModelImplCopyWith<$Res> {
   __$$NewsModelImplCopyWithImpl(
-    _$NewsModelImpl _value,
-    $Res Function(_$NewsModelImpl) _then,
-  ) : super(_value, _then);
+      _$NewsModelImpl _value, $Res Function(_$NewsModelImpl) _then)
+      : super(_value, _then);
 
-  /// Create a copy of NewsModel
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -147,48 +131,45 @@ class __$$NewsModelImplCopyWithImpl<$Res>
     Object? author = null,
     Object? content = null,
   }) {
-    return _then(
-      _$NewsModelImpl(
-        title: null == title
-            ? _value.title
-            : title // ignore: cast_nullable_to_non_nullable
-                  as String,
-        description: null == description
-            ? _value.description
-            : description // ignore: cast_nullable_to_non_nullable
-                  as String,
-        urlToImage: null == urlToImage
-            ? _value.urlToImage
-            : urlToImage // ignore: cast_nullable_to_non_nullable
-                  as String,
-        url: null == url
-            ? _value.url
-            : url // ignore: cast_nullable_to_non_nullable
-                  as String,
-        author: null == author
-            ? _value.author
-            : author // ignore: cast_nullable_to_non_nullable
-                  as String,
-        content: null == content
-            ? _value.content
-            : content // ignore: cast_nullable_to_non_nullable
-                  as String,
-      ),
-    );
+    return _then(_$NewsModelImpl(
+      title: null == title
+          ? _value.title
+          : title // ignore: cast_nullable_to_non_nullable
+              as String,
+      description: null == description
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
+              as String,
+      urlToImage: null == urlToImage
+          ? _value.urlToImage
+          : urlToImage // ignore: cast_nullable_to_non_nullable
+              as String,
+      url: null == url
+          ? _value.url
+          : url // ignore: cast_nullable_to_non_nullable
+              as String,
+      author: null == author
+          ? _value.author
+          : author // ignore: cast_nullable_to_non_nullable
+              as String,
+      content: null == content
+          ? _value.content
+          : content // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$NewsModelImpl implements _NewsModel {
-  const _$NewsModelImpl({
-    required this.title,
-    required this.description,
-    required this.urlToImage,
-    required this.url,
-    required this.author,
-    required this.content,
-  });
+  const _$NewsModelImpl(
+      {required this.title,
+      required this.description,
+      required this.urlToImage,
+      required this.url,
+      required this.author,
+      required this.content});
 
   factory _$NewsModelImpl.fromJson(Map<String, dynamic> json) =>
       _$$NewsModelImplFromJson(json);
@@ -226,21 +207,12 @@ class _$NewsModelImpl implements _NewsModel {
             (identical(other.content, content) || other.content == content));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
-    runtimeType,
-    title,
-    description,
-    urlToImage,
-    url,
-    author,
-    content,
-  );
+      runtimeType, title, description, urlToImage, url, author, content);
 
-  /// Create a copy of NewsModel
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$NewsModelImplCopyWith<_$NewsModelImpl> get copyWith =>
@@ -248,19 +220,20 @@ class _$NewsModelImpl implements _NewsModel {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$NewsModelImplToJson(this);
+    return _$$NewsModelImplToJson(
+      this,
+    );
   }
 }
 
 abstract class _NewsModel implements NewsModel {
-  const factory _NewsModel({
-    required final String title,
-    required final String description,
-    required final String urlToImage,
-    required final String url,
-    required final String author,
-    required final String content,
-  }) = _$NewsModelImpl;
+  const factory _NewsModel(
+      {required final String title,
+      required final String description,
+      required final String urlToImage,
+      required final String url,
+      required final String author,
+      required final String content}) = _$NewsModelImpl;
 
   factory _NewsModel.fromJson(Map<String, dynamic> json) =
       _$NewsModelImpl.fromJson;
@@ -277,11 +250,8 @@ abstract class _NewsModel implements NewsModel {
   String get author;
   @override
   String get content;
-
-  /// Create a copy of NewsModel
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$NewsModelImplCopyWith<_$NewsModelImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

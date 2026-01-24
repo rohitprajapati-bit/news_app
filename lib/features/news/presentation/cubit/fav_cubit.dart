@@ -1,16 +1,29 @@
 import 'package:bloc/bloc.dart';
+import 'package:hive/hive.dart';
+import 'package:news_app/features/news/data/mappers/news_hive_mapper.dart';
+import 'package:news_app/features/news/data/models/hive_model/news_hive_model.dart';
+import 'package:news_app/features/news/domain/entities/news.dart';
 
-class FavCubit extends Cubit<Set<int>> {
-  FavCubit() : super({});
+class FavCubit extends Cubit<List<News>> {
+  final Box<NewsHiveModel> _favBox;
 
-  void toggleFavorite(int index) {
-    final newSet = Set<int>.from(state);
+  FavCubit(this._favBox) : super([]) {
+    loadFavorites();
+  }
 
-    if (newSet.contains(index)) {
-      newSet.remove(index);
+  void loadFavorites() {
+    final favorites = _favBox.values.map((e) => e.toEntity()).toList();
+    emit(favorites);
+  }
+
+  Future<void> toggleFavorite(News news) async {
+    final isFav = _favBox.containsKey(news.url);
+
+    if (isFav) {
+      await _favBox.delete(news.url);
     } else {
-      newSet.add(index);
+      await _favBox.put(news.url, news.toHiveModel());
     }
-    emit(newSet);
+    loadFavorites();
   }
 }
