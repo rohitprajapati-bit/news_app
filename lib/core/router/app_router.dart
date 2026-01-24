@@ -50,7 +50,7 @@ class AppRouter {
     GoRoute(
       path: AppRoutes.favorites,
       name: 'favorites',
-      builder: (_, _) => const FavoritesPage(),
+      builder: (_, _) => const FavPage(),
     ),
     GoRoute(
       path: AppRoutes.settings,
