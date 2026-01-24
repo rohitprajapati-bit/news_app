@@ -1,0 +1,27 @@
+import 'package:get_it/get_it.dart';
+import 'package:news_app/core/network/api_client.dart';
+import 'package:news_app/features/news/data/datasources/news_remote_datasource.dart';
+import 'package:news_app/features/news/data/repositories/news_repository_impl.dart';
+import 'package:news_app/features/news/domain/repositories/news_repository.dart';
+import 'package:news_app/features/news/domain/usecases/get_top_headlines.dart';
+import 'package:news_app/features/news/presentation/bloc/news_bloc.dart';
+import 'package:news_app/features/news/presentation/cubit/fav_cubit.dart';
+
+final sl = GetIt.instance;
+
+Future<void> init() async {
+  sl.registerLazySingleton(() => ApiClient());
+
+  sl.registerLazySingleton<NewsRemoteDataSource>(
+    () => NewsRemoteDataSourceImpl(sl()),
+  );
+
+  sl.registerLazySingleton<NewsRepository>(
+    () => NewsRepositoryImpl(sl()),
+  );
+
+  sl.registerLazySingleton(() => GetTopHeadlines(sl()));
+
+  sl.registerFactory(() => NewsBloc(sl()));
+  sl.registerFactory(() => FavCubit()); 
+}

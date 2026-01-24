@@ -1,3 +1,5 @@
+import 'package:news_app/features/news/domain/entities/news.dart';
+
 abstract class NewsRepository {
-  // TODO: Define repository methods
+  Future<List<News>> getTopHeadlines();
 }

@@ -1,11 +1,27 @@
-import 'package:equatable/equatable.dart';
+import 'package:news_app/features/news/data/models/news_model.dart';
 
-class News extends Equatable {
+class News {
   final String title;
+  final String description;
+  final String imageUrl;
   final String content;
+  final String url;
 
-  const News({required this.title, required this.content});
+  News({
+    required this.title,
+    required this.description,
+    required this.imageUrl,
+    required this.content,
+    required this.url,
+  });
+}
 
-  @override
-  List<Object?> get props => [title, content];
+extension NewsMapper on NewsModel {
+  News toEntity() => News(
+    title: title,
+    description: description,
+    imageUrl: urlToImage,
+    content: content,
+    url: url,
+  );
 }

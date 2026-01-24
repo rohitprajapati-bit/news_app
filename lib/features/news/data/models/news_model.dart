@@ -1,11 +1,27 @@
-import '../../domain/entities/news.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
 
-class NewsModel extends News {
-  const NewsModel({
-    required super.title,
-    required super.content,
-    // TODO: Add other fields
-  });
+part 'news_model.freezed.dart';
+part 'news_model.g.dart';
 
-  // TODO: Add fromJson/toJson
+@freezed
+class NewsModel with _$NewsModel {
+  const factory NewsModel({
+    required String title,
+    required String description,
+    required String urlToImage,
+    required String url,
+    required String author,
+    required String content,
+    
+  }) = _NewsModel;
+
+  factory NewsModel.fromJson(Map<String, dynamic> json) =>
+      _$NewsModelFromJson({
+        "title": json["title"] ?? "",
+        "description": json["description"] ?? "",
+        "urlToImage": json["urlToImage"] ?? "",
+        "url": json["url"] ?? "",
+        "author": json["author"] ?? "",
+        "content": json["content"] ?? "",
+      });
 }

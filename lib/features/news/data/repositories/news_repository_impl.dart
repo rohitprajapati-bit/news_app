@@ -1,5 +1,15 @@
-import '../../domain/repositories/news_repository.dart';
+import 'package:news_app/features/news/data/datasources/news_remote_datasource.dart';
+import 'package:news_app/features/news/domain/entities/news.dart';
+import 'package:news_app/features/news/domain/repositories/news_repository.dart';
 
 class NewsRepositoryImpl implements NewsRepository {
-  // TODO: Implement repository methods
+  final NewsRemoteDataSource remote;
+
+  NewsRepositoryImpl(this.remote);
+
+  @override
+  Future<List<News>> getTopHeadlines() async {
+    final result = await remote.getTopHeadlines();
+    return result.map((e) => e.toEntity()).toList();
+  }
 }

@@ -26,7 +26,7 @@ class _BottomNavBarContent extends StatelessWidget {
 
   final List<Widget> _pages = const [
     HomePage(),
-    FavoritesPage(),
+    FavPage(),
     SettingPage(),
   ];
 
