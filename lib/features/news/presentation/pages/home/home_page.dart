@@ -25,8 +25,13 @@ class _HomeView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: AppBackground(
-        child: CustomScrollView(
-          slivers: [SliverAppBarWidget(), SliverToBoxAdapterWidget()],
+        child: RefreshIndicator(
+          onRefresh: () async {
+            context.read<NewsBloc>().add(LoadNewsEvent());
+          },
+          child: CustomScrollView(
+            slivers: [SliverAppBarWidget(), SliverToBoxAdapterWidget()],
+          ),
         ),
       ),
     );

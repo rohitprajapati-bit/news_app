@@ -15,7 +15,6 @@ class SearchTextField extends StatelessWidget {
         hintText: 'Search by title...',
         border: OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
         prefixIcon: Icon(Icons.search_outlined),
-        suffixIcon: Icon(Icons.mic_outlined),
       ),
     );
   }
