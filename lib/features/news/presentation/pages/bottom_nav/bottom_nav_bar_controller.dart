@@ -1,9 +1,11 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:news_app/core/injection/injection_container.dart';
-import 'package:news_app/features/news/presentation/bloc/bottom_nav/bottom_nav_bloc.dart';
-import 'package:news_app/features/news/presentation/bloc/bottom_nav/bottom_nav_event.dart';
-import 'package:news_app/features/news/presentation/bloc/bottom_nav/bottom_nav_state.dart';
+import 'package:news_app/features/news/presentation/bloc/bottom_nav_bar/bottom_nav_bloc.dart';
+import 'package:news_app/features/news/presentation/bloc/bottom_nav_bar/bottom_nav_event.dart';
+import 'package:news_app/features/news/presentation/bloc/bottom_nav_bar/bottom_nav_state.dart';
 import 'package:news_app/features/news/presentation/pages/bottom_nav/widgets/build_floating_nav_bar.dart';
 import 'package:news_app/features/news/presentation/pages/favorites/favorites_page.dart';
 import 'package:news_app/features/news/presentation/pages/home/home_page.dart';
@@ -34,6 +36,7 @@ class _BottomNavBarContent extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocBuilder<BottomNavBloc, BottomNavState>(
       builder: (context, state) {
+        log('build1');
         return Scaffold(
           extendBody: true, // Important for floating nav bar
           body: IndexedStack(index: state.index, children: _pages),

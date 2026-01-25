@@ -21,7 +21,7 @@ class NewsHiveModelAdapter extends TypeAdapter<NewsHiveModel> {
       description: fields[1] as String,
       urlToImage: fields[2] as String,
       url: fields[3] as String,
-      author: fields[4] as String,
+      author: fields[4] as String?,
       content: fields[5] as String,
     );
   }

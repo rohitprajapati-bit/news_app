@@ -1,5 +1,4 @@
 import 'package:hive/hive.dart';
-
 part 'news_hive_model.g.dart';
 
 @HiveType(typeId: 1)
@@ -17,7 +16,7 @@ class NewsHiveModel extends HiveObject {
   final String url;
 
   @HiveField(4)
-  final String author;
+  final String? author;
 
   @HiveField(5)
   final String content;
@@ -27,7 +26,7 @@ class NewsHiveModel extends HiveObject {
     required this.description,
     required this.urlToImage,
     required this.url,
-    required this.author,
+    this.author,
     required this.content,
   });
 }

@@ -5,7 +5,7 @@ extension NewsMapper on NewsModel {
   News toEntity() => News(
     title: title,
     description: description,
-    imageUrl: urlToImage,
+    urlToImage: urlToImage,
     content: content,
     url: url,
   );

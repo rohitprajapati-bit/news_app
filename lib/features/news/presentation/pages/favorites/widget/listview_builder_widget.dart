@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:news_app/core/router/app_routes.dart';
 import 'package:news_app/features/news/presentation/cubit/fav_cubit.dart';
 
@@ -32,11 +33,13 @@ class ListviewBuilderWidget extends StatelessWidget {
               onTap: () {
                 context.push(AppRoutes.detailWeb, extra: news);
               },
-              leading: Image.network(
-                news.imageUrl,
+              leading: CachedNetworkImage(
+                imageUrl: news.urlToImage,
                 width: 60,
                 fit: BoxFit.cover,
-                errorBuilder: (context, error, stackTrace) =>
+                progressIndicatorBuilder: (context, url, downloadProgress) =>
+                    CircularProgressIndicator(value: downloadProgress.progress),
+                errorWidget: (context, url, error) =>
                     const Icon(Icons.broken_image),
               ),
               title: Text(news.title),

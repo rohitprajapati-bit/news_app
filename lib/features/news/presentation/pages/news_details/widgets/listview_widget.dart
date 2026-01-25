@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 
 class ListviewWidget extends StatelessWidget {
   final dynamic news;
@@ -14,7 +15,19 @@ class ListviewWidget extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
             child: Column(
               children: [
-                Image.network(news.imageUrl),
+                CachedNetworkImage(
+                  imageUrl: news.urlToImage,
+                  fit: BoxFit.cover,
+                  placeholder: (context, url) => Container(
+                    height: 200,
+                    color: Colors.grey[300],
+                    child: const Center(child: CircularProgressIndicator()),
+                  ),
+                  errorWidget: (context, url, error) => const SizedBox(
+                    height: 200,
+                    child: Center(child: Icon(Icons.broken_image, size: 50)),
+                  ),
+                ),
                 const SizedBox(height: 10),
                 Text(
                   news.title,

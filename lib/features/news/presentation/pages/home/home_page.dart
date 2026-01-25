@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:news_app/core/injection/injection_container.dart';
 import 'package:news_app/core/widgets/app_background.dart';
-import 'package:news_app/features/news/presentation/bloc/news_bloc.dart';
-import 'package:news_app/features/news/presentation/bloc/news_event.dart';
+import 'package:news_app/features/news/presentation/bloc/load_news/news_bloc.dart';
 import 'package:news_app/features/news/presentation/pages/home/widgets/sliver_app_bar_widget.dart';
 import 'package:news_app/features/news/presentation/pages/home/widgets/sliver_to_box_adapter.dart';
 

@@ -6,7 +6,7 @@ import 'package:news_app/features/news/data/models/hive_model/news_hive_model.da
 import 'package:news_app/features/news/data/repositories/news_repository_impl.dart';
 import 'package:news_app/features/news/domain/repositories/news_repository.dart';
 import 'package:news_app/features/news/domain/usecases/get_top_headlines.dart';
-import 'package:news_app/features/news/presentation/bloc/news_bloc.dart';
+import 'package:news_app/features/news/presentation/bloc/load_news/news_bloc.dart';
 import 'package:news_app/features/news/presentation/cubit/fav_cubit.dart';
 
 final sl = GetIt.instance;

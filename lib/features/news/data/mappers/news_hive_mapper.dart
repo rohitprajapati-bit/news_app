@@ -6,9 +6,8 @@ extension NewsToHiveMapper on News {
     return NewsHiveModel(
       title: title,
       description: description,
-      urlToImage: imageUrl,
+      urlToImage: urlToImage,
       url: url,
-      author: '', 
       content: content,
     );
   }
@@ -19,7 +18,7 @@ extension HiveToNewsMapper on NewsHiveModel {
     return News(
       title: title,
       description: description,
-      imageUrl: urlToImage,
+      urlToImage: urlToImage,
       url: url,
       content: content,
     );
