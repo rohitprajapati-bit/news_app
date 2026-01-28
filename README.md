@@ -13,7 +13,6 @@ A professional news application built with Flutter, implementing Clean Architect
 - **🔍 Smart Search**: Advanced search with filters and suggestions
 - **💾 Offline Support**: Read cached articles without internet
 - **🔄 Pull to Refresh**: Seamless content updates
-- **🌙 Dark Mode**: Eye-friendly theme switching
 - **📱 Cross-platform**: Optimized for Android, iOS, Web, and Desktop
 - **⚡ Performance**: Fast loading with efficient caching
 - **🎨 Beautiful UI**: Material Design 3 components
