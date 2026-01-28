@@ -116,7 +116,7 @@ dependencies:
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/news_app.git
+   git clone https:https://github.com/rohitprajapati-bit/news_app.git
    cd news_app
    ```
 
@@ -129,7 +129,7 @@ dependencies:
    - Get your free API key from [NewsAPI.org](https://newsapi.org)
    - Create a `.env` file in the root directory:
      ```
-     NEWS_API_KEY=your_api_key_here
+     NEWS_API_KEY=d14e1d2592c645ad962ddf6f226b09bf
      ```
 
 4. **Run the app**
@@ -264,9 +264,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 **Rohit Prajapati**  
 Flutter Developer
 
-[![GitHub](https://github.com/rohitprajapati-bit)
-[![LinkedIn](https://www.linkedin.com/in/rohit-prajapati-77083b30a/)
-[![Portfolio](https://upgrade-portfolio.web.app/)
+[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/rohitprajapati-bit)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/rohitprajapati77083b30a/)
+[![Portfolio](https://img.shields.io/badge/Portfolio-FF5722?style=for-the-badge&logo=todoist&logoColor=white)](https://upgrade-portfolio.web.app/)
 
 ## 🙏 Acknowledgments
 
