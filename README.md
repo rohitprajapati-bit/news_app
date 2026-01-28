@@ -7,15 +7,6 @@
 
 A professional news application built with Flutter, implementing Clean Architecture, BLoC state management, and offline-first capabilities. Features real-time news updates, intelligent caching, and a seamless user experience across all platforms.
 
-## 📸 Screenshots
-
-<p align="center">
-  <img src="screenshots/home.png" width="200" alt="Home Screen"/>
-  <img src="screenshots/search.png" width="200" alt="Search Screen"/>
-  <img src="screenshots/detail.png" width="200" alt="Detail Screen"/>
-  <img src="screenshots/dark_mode.png" width="200" alt="Dark Mode"/>
-</p>
-
 ## ✨ Features
 
 - **📰 Real-time News**: Fetches latest news from multiple sources
@@ -110,7 +101,6 @@ dependencies:
   get_it: ^7.6.0
   equatable: ^2.0.5
   cached_network_image: ^3.2.0
-  connectivity_plus: ^4.0.0
 ```
 
 ## 🚀 Getting Started
@@ -274,9 +264,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 **Rohit Prajapati**  
 Flutter Developer
 
-[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/yourusername)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/yourprofile)
-[![Portfolio](https://img.shields.io/badge/Portfolio-FF5722?style=for-the-badge&logo=todoist&logoColor=white)](https://yourportfolio.com)
+[![GitHub](https://github.com/rohitprajapati-bit)
+[![LinkedIn](https://www.linkedin.com/in/rohit-prajapati-77083b30a/)
+[![Portfolio](https://upgrade-portfolio.web.app/)
 
 ## 🙏 Acknowledgments
 
